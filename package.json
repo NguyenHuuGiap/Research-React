@@ -2,12 +2,16 @@
   "name": "redux-simple-starter",
   "version": "1.0.0",
   "description": "Simple starter package for Redux with React and Babel support",
+  "homepage": "https://nguyenhuugiap.github.io/Research-React/",
   "main": "index.js",
-  "repository": "git@github.com:StephenGrider/ReduxSimpleStarter.git",
+  "repository": "git@github.com:NguyenHuuGiap/Research-React.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "build": "webpack --config",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +25,7 @@
   },
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
+    "gh-pages": "^2.0.1",
     "lodash": "4.17.5",
     "react": "16.3.2",
     "react-dom": "16.3.2",
